@@ -9,43 +9,28 @@
   <body>
     <div class="table-container">
       <h1>Score Table</h1>
-      <table id="tableData">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Family</th>
-            <th>Score</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+      <div id="table">
+        <div class="table-header">
+          <div class="table-cell">Name</div>
+          <div class="table-cell">Family</div>
+          <div class="table-cell">Score</div>
+          <div class="table-cell">TableAction</div>
+        </div>
+
+        <div class="table-body"></div>
+      </div>
     </div>
     <form id="formData" class="form-container">
       <h1>Register Form</h1>
-      <input
-        type="text"
-        id="name"
-        placeholder="name"
-        required
-        pattern="[a-zA-Z]+"
-      />
-      <input
-        type="text"
-        id="family"
-        placeholder="family"
-        required
-        pattern="[a-zA-Z]+"
-      />
-      <input
-        type="number"
-        id="score"
-        placeholder="score"
-        required
-        min="0"
-        max="100"
-      />
+      <input type="text" id="name" placeholder="Name" />
+      <div id="name-error"></div>
+      <input type="text" id="family" placeholder="Family" />
+      <div id="family-error"></div>
+      <input type="number" id="score" placeholder="Score" />
+      <div id="score-error"></div>
       <button type="submit" id="save">Save</button>
     </form>
+
     <script src="./script.js"></script>
   </body>
 </html>

@@ -5,6 +5,8 @@
 
 body {
   background-image: url(./assets/IMG/bgImage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
 }
@@ -69,19 +71,52 @@ button {
   color: #d2dee0;
 }
 
-table {
+#table {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #fff;
   width: 80%;
-}
-
-th,
-td {
-  border: 1px solid #d2dee0;
-  padding: 8px;
-  text-align: center;
+  max-width: 500px;
   color: #19353b;
 }
 
-th {
+.table-header {
+  display: flex;
   background-color: #d2dee0;
-  color: #666d6e;
+  font-weight: bold;
+}
+
+.table-row {
+  display: flex;
+  border-top: 1px solid #fff;
+}
+
+.table-cell {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  border-right: 1px solid #fff;
+  width: 20%;
+}
+
+.table-cell:last-child {
+  border-right: none;
+}
+
+svg {
+  display: inline-block;
+  flex-direction: column;
+  height: 15px;
+  width: 15px;
+
+  border: none;
+  border-radius: 15px;
+  color: #d2dee0;
+}
+
+#family-error,
+#score-error,
+#name-error {
+  color: #6e0909;
+  font-size: 12px;
 }
